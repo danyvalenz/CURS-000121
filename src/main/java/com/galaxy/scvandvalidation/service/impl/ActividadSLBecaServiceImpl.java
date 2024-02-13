@@ -31,5 +31,8 @@ public class ActividadSLBecaServiceImpl implements ActividadSLBecaService {
     @Override
     public void trucateReadData(List<ActividadSLBecaEntity> lst) {
 
+        this.actividadSLBecaRepository.truncateTabla();
+        this.actividadSLBecaRepository.saveAll(lst);
+
     }
 }
